@@ -1,0 +1,17 @@
+<ActionBar title="Details" class="action-bar"></ActionBar>
+<FlexboxLayout flexDirection="column" class="page">
+    <StackLayout>
+        <Button text="Reset Position" (tap)="reset($event)"></Button>
+        <Label class="h2" [text]="item.name"></Label>
+    </StackLayout>
+    <Label class="h4" [text]="item.role"></Label>
+    <GridLayout #container  width="100%" height="400" backgroundColor="gray">
+        <Image 
+        #dragImage 
+        width="100" 
+        height="100" 
+        horizontalAlignment="left" 
+        verticalAlignment="top"
+        (pan)="onPan($event)" src="~/app/assets/eisson.png"></Image>        
+    </GridLayout>
+</FlexboxLayout>
