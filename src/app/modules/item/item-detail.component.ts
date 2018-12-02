@@ -71,7 +71,7 @@ export class ItemDetailComponent implements OnInit {
   restrictBoundaries() {
     // calculate the conversion from DP to pixels
     let convFactor =
-      this.dragImageItem.width / this.dragImageItem.getMeasuredWidth();
+      <number>this.dragImageItem.width / this.dragImageItem.getMeasuredWidth();
     let edgeX =
       (this.itemContainer.getMeasuredWidth() -
         this.dragImageItem.getMeasuredWidth()) *
